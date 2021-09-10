@@ -2,7 +2,7 @@
 """
 Created on Fri Apr 17 17:38:52 2020
 
-@author: Antoine
+@author: Michelle
 """
 
 import matplotlib.pyplot as plt
@@ -25,7 +25,8 @@ sns.pairplot(dataset)
 #using the elbow method to find the ideal number of clusters
 from sklearn.cluster import KMeans 
 
-wcv = []#created empty list
+#created empty list
+wcv = []
 
 for i in range(1, 11):
     km=KMeans(n_clusters=i)
@@ -44,7 +45,6 @@ km4=KMeans(n_clusters=4, random_state=0) #Initialize
 y_means = km4.fit_predict(dataset) #train
 
 dataset["LABEL"]=y_means
-
 
 sns.scatterplot(x="imdb_score", y="gross_inflation_adjusted_2019", hue="LABEL", palette="Set1", data=dataset)
 sns.scatterplot(x="actor_1_facebook_likes", y="gross_inflation_adjusted_2019", hue="LABEL", palette="Set1", data=dataset)
