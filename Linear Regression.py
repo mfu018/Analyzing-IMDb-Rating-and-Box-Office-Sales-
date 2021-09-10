@@ -2,7 +2,7 @@
 """
 Created on Thu Apr 16 18:16:24 2020
 
-@author: Antoine, Yunhan
+@author: Michelle
 """
 
 #-----------------------------------REGRESSION---------------------------------
@@ -10,7 +10,7 @@ Created on Thu Apr 16 18:16:24 2020
 import pandas as pd
 import seaborn as sns
 
-#read the data
+#Reading the data
 data = pd.read_csv("moviemetadata_python.csv")
 
 data["gross_inflation_adjusted_2019"]=data["gross_inflation_adjusted_2019"]/1000000
